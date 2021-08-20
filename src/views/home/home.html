@@ -1,0 +1,51 @@
+<div class="main">
+
+    <section class="signup">
+        <div class="container">
+
+
+
+            <h1 style="color: rgb(255, 255, 255); text-align: center;">CRUD Operations
+            </h1>
+
+        </div>
+        <div class="container1">
+
+
+            <div class="signup-content">
+                <form method="POST" action="/add-classmate" class="signup-form">
+
+                    <div class="form-group">
+                        <input type="name" class="form-input1" name="name" style="text-align: center;"
+                            placeholder="Full Name" />
+                        <input type="name" class="form-input1" name="course" style="text-align: center;"
+                            placeholder="Course" />
+                        <input type="name" class="form-input1" name="section" style="text-align: center;"
+                            placeholder="Section" />
+                        <br>
+                        <input type="submit" name="submit" class="form-submit" value="Add" />
+                    </div>
+                    <h1 style="color: rgb(44, 44, 44); text-align: center;">TABLE</h1>
+                    {{> messages}}
+                </form>
+                {{#each namesList}}
+                <h3>
+                    {{this.fullName}} - {{this.course}} - {{this.section}}
+                    <a href="/delete-name/{{this._id}}" style="text-decoration:none">
+                        <font size="-1">&nbsp;<span style="color: red;">Delete<i class="fa fa-trash-o"
+                                    aria-hidden="true"></i></span></font>
+                    </a>
+                    <a href="/edit-classmate/{{this._id}}" style="text-decoration:none">
+                        <font size="-1"><span>Edit<i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></font>
+                    </a>
+                </h3>
+                {{/each}}
+            </div>
+            <a href="/sign-out" style="text-align: end; text-decoration:none">
+                <p>LOG OUT</p>
+            </a>
+
+        </div>
+    </section>
+
+</div>

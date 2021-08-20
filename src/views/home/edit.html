@@ -1,0 +1,24 @@
+<div class="main">
+
+    <section class="signup">
+        <!-- <img src="images/signup-bg.jpg" alt=""> -->
+        <div class="container1">
+
+            <div class="signup-content">
+                <form method="POST" action="/save-edit/{{id}}" id="save-edit" class="form-group" class="signup-form">
+                    <h2 class="form-title">Edit</h2>
+                        <input type="text" class="form-input1" id="name" name="fullName" style="text-align: center;"
+                            placeholder="Full Name" value="{{name}}" />
+                        <input type="text" class="form-input1" id="name" name="course" style="text-align: center;"
+                            placeholder="Course" value="{{course}}" />
+                        <input type="text" class="form-input1" id="name" name="section" style="text-align: center;"
+                            placeholder="Section" value="{{section}}" />
+                        <br>
+                        <button class="form-submit">SAVE</button>
+                    {{> messages}}
+                </form>
+            </div>
+        </div>
+    </section>
+
+</div>
